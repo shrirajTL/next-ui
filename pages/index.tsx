@@ -13,6 +13,10 @@ const Home: NextPage = () => {
     router.push('https://qa.talkinglands.com');
   }
 
+  const signupClick = () => {
+    router.push('/signup')
+  }
+
   const [visible, setVisible] = useState(false);
   const handler = () => setVisible(true);
   const closeHandler = () => {
@@ -30,14 +34,14 @@ const Home: NextPage = () => {
         </Navbar.Brand>
         <Navbar.Content hideIn="md">
           <Navbar.Link href="#">Team</Navbar.Link>
-          <Navbar.Link href="#">Careers</Navbar.Link>
-          <Navbar.Link href="#">About Us</Navbar.Link>
+          <Navbar.Link href="/careers">Careers</Navbar.Link>
+          <Navbar.Link href="/about">About Us</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link href="#">Login</Navbar.Link>
           <Navbar.Item>
             <div>
-              <Button auto flat color='error' onPress={handler}>
+              <Button auto flat color='error' onPress={signupClick}>
                 Sign Up
               </Button>
               <Modal
@@ -102,7 +106,7 @@ const Home: NextPage = () => {
           <InfoCard
             title='Dhaanvi Farms'
             imageURL="https://littlevisuals.co/images/red_dawn.jpg"
-            price="35"
+            price="0   5"
           />
         </Grid>
         <Grid xs={12} sm={4}>
